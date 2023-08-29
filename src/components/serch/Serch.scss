@@ -1,0 +1,71 @@
+.Serch{
+    margin: auto;
+    width: 1519px;
+    height: 250px;
+    background-color: #fff;
+    position: relative;
+    box-shadow: 0 8px 11px -7px rgba(0,0,0,.25);
+
+    ul{  
+         margin-top: 30px;
+         justify-content: center;
+         margin-left: 360px;
+         align-items: center;
+         display: flex;
+         height: 70px;
+         list-style-type: none;
+         overflow-x: auto;
+         width: 900px;
+    li{
+        background-color: #f4f4f4;
+        border: 1px solid #bebdbd;
+        border-radius: 30px;
+        margin: 0 10px;
+         a{
+            color: #4361EE;
+            display: flex;
+            font-size: 20px;
+            padding: 10px 30px;
+            text-decoration: none;
+            white-space: nowrap;
+         }
+    }
+    }
+    button{
+        color: #fff;
+        background-color: dodgerblue;
+        border: none;
+        border: 2px solid #3498db;
+        font-size: 30px;
+        border-radius: 0 10px 10px 0;
+        width: 100px;
+        height: 68px;
+        position: absolute;
+        left: 1170px;
+        bottom: 121.9px;
+        cursor: pointer;
+    }
+}
+.serch_logo{
+    width: 180px;
+    height: 73px;
+    margin-top: 60px;
+    margin-left: 190px;
+}
+
+.serch_inp{
+    position: absolute;
+    width: 828px;
+    height: 61px;
+    border-radius: 10px;
+    flex: 1 1;
+    padding-left: 10px;
+    font-size: 20px;
+    border: 2px solid #3498db;
+    border-radius: #3498db;
+    margin-left: 20px;
+    top: 61px;
+    outline: none;
+    left: 400px;
+}
+
