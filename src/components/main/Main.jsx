@@ -8,14 +8,11 @@ const Main = () => {
   const [homeReeldata, setHomeReeldata] = useState([]);
 
   useEffect(() => {
-    let isDataFetched = false;
     instance("/category/category-reel")
       .then(response => setHomeReeldata(response.data))
       .catch(err => console.log(err))
 
-    return () => {
-      isDataFetched = true;
-    }
+   
   }, [])
 
   return (
