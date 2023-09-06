@@ -1,28 +1,28 @@
 import "./Aside.scss";
 import {instance } from "../../api/axios";
-import { Link } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import {AiOutlineAppstore} from "react-icons/ai";
 import {FiChevronRight} from "react-icons/fi";
 import { v4 as uuidv4 } from 'uuid';
+import { Link, useLocation } from "react-router-dom";
 
 
 const Aside = () => {
+
   const [categoryData, setCategoryData] = useState([])
+  let location = useLocation()   
+
   useEffect(() => {
-    let isFetched = false;
     instance("/category/category-nest")
       .then(response => setCategoryData(response.data))
       .catch(err => console.log(err))
-      console.log(isFetched)
-      return () => {
-        isFetched = true
-      }
   }, [])
-  return (
-    <div className="aside">
-      <p className="aside__header"><AiOutlineAppstore/>Category</p>
-      <ul className="aside__menu">
+
+ 
+  return location.pathname.includes("product-view") ?<></> :(
+    <div className="aside" >
+       <p className="aside__header"><AiOutlineAppstore/>Category</p>
+        <ul className="aside__menu">
         {
           categoryData.mainCategory_ru?.map((mainCategoryItem, ind) => 
             <li key={uuidv4()} className="aside__menu-item">

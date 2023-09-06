@@ -42,11 +42,12 @@ const ProductCarousel = ({categoryData}) => {
         {
           categoryData.allRefinedProducts.map(product => 
             <SwiperSlide key={product._id}>
-             <ProductCard productData={product} />
+             <ProductCard  productData={product} />
             </SwiperSlide>
           )
         }
       </Swiper>
+
     </div>
   )
 }

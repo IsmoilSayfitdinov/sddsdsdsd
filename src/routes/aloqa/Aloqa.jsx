@@ -1,5 +1,6 @@
 import React from 'react'
 import "./Aloqa.scss"
+import Search from '../../components/serch/Serch'
 
 const Aloqa = () => {
   return (

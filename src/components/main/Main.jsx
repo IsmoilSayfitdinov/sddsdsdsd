@@ -12,7 +12,7 @@ const Main = () => {
       .then(response => setHomeReeldata(response.data))
       .catch(err => console.log(err))
 
-   
+    
   }, [])
 
   return (

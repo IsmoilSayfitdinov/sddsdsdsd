@@ -18,16 +18,22 @@
 
 
 .product__imgs{
-    height: 700px;
     min-height: 615px;
     max-width: 750px;
     margin-left: 50px;
     margin-top: 130px;
-     img{
+    width: 45%;
+    .img_items{
         width: 100%;
        object-fit: cover;
      }
-     
+     .img_items-card{
+        width: 150px;
+        height: 150px;
+        border-radius: 10px;
+        margin-top: 50px;
+        display: block;
+     }
 }
 
 .product__catecory-name{
@@ -186,18 +192,7 @@ select{
     font-weight: 700;
 }
 
-
-.exia{
-   
-    border-radius: 100%;
-    position: absolute;
-    left: 30px;
-    top: 100px;
-    .Exiat{
-         img{
-            width: 70px;
-            height: 70px;
-         }
-      }
+.aaa{
+    display: none;
 }
 
