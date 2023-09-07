@@ -1,28 +1,32 @@
 import React from 'react'
 import "./Service.scss"
+import { useTranslation } from 'react-i18next'
 
 const Service = () => {
+
+  const {t} = useTranslation()
+
   return (
     <div className="service">
         <div className="text_Service">
-             <h2>Биз мижозларга қуйидагиларни таклиф қиламиз</h2>
+             <h2>{t("endService.h2")}</h2>
         </div>
          <ul>
          <li>
-            <h4>Бўлиб-бўлиб сотиб олиш</h4>
-            <span>MOLD-COMPONENTS да ишлаб чиқариш учун қулай онлайн буюртмалар режаси</span>
+            <h4>{t("endService.h4")}</h4>
+            <span>{t("endService.span")}</span>
           </li>
            <li>
-            <h4>Йетказиб бериш бепул</h4>
-            <span>Сифатли маҳсулотлар ва хизматлар</span>
+            <h4>{t("endService.h42")}</h4>
+            <span>{t("endService.span2")}</span>
            </li>
            <li>
-              <h4>Бонус тизими </h4>
-              <span>Бонус тизими</span>
+              <h4>{t("endService.h43")}</h4>
+              <span>{t("endService.span3")}</span>
            </li>
            <li>
-              <h4>Ёрдам!</h4>
-              <span>TSS</span>
+              <h4>{t("endService.h44")}</h4>
+              <span>{t("endService.span4")}</span>
            </li>
          </ul>
     </div>

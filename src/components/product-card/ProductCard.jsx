@@ -3,6 +3,7 @@ import { DefaultButton } from '../../utils/Utils';
 import { Link } from 'react-router-dom';
 import { FiChevronRight } from 'react-icons/fi';
 import "./ProductCard.scss"
+import Mn from '../../routes/maincategory/Mn';
 
 
 const ProductCard = ({productData}) => {
@@ -22,6 +23,7 @@ const ProductCard = ({productData}) => {
         {`${productData?.productSizesAndQuantity[0].price} ${productData?.productSizesAndQuantity.length > 1 ? "- " + productData?.productSizesAndQuantity.reverse()[0].price : ""} CУМ ` }
       </div>
       <DefaultButton text="Саватга қўшиш"/>
+      <Mn productId={productData}/>
     </div>
 
   )

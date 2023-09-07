@@ -44,7 +44,7 @@ const ProductView = () => {
         <div className='productId'>
             <div className="product__imgs">
                 <img className='img_items' src={productsItems.productImages?.[activeImageNumber]} alt="" />
-                <div>
+                <div className='img__card-product'>
                  {
                    productsItems?.productImages?.map((isSetimg, ind)=>
                    <img className='img_items-card' style={ind === activeImageNumber ? {border: "3px solid dodgerblue"} : {border: "3px solid transparent"}} width={100} height={100} src={isSetimg} alt="" onClick={() => setActiveImageNumber(ind)} />  
@@ -62,7 +62,7 @@ const ProductView = () => {
                 </div>
                 <div className='product__price-size'>
                     <h2>На складе:</h2>
-                    <span className='price__product'>46</span>
+                    <span className='price__product'>{productsItems?.productSizesAndQuantity?.[selectedVariant]?.quantity}</span>
                     <h2>Размер:</h2>
                     <select onChange={(e)=>{
                         setSelectedVariant(+e.target.value)

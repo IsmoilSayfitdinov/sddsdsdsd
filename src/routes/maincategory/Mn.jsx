@@ -6,7 +6,7 @@ import {FiChevronRight} from "react-icons/fi"
 import {TbHandClick} from "react-icons/tb"
 import "./Mn.scss"
 
-const Mn = (productData) => {
+const Mn = () => {
     
     let idItems = useParams()
 
@@ -21,8 +21,6 @@ const Mn = (productData) => {
     },[idItems.id])
 
 
-
-
      
     return (
         <>
@@ -32,10 +30,10 @@ const Mn = (productData) => {
               <div className='main_product'>
                   <div className='products'> 
                  {
-                    isItems?.map(i=>(
+                    isItems?.map(i =>(
                        <div className='product__mainCtegory-items'>
                          <div className='product__mainCategory-img'>
-                             <Link to={`/product-view/${productData._id}`}>
+                             <Link to={`/product-view/${i?._id}`}>
                                 <img style={{width:"250px", height:"230px"}} src={i?.productImages?.at(0)} alt="" />
                              </Link>
                              <h2 className='product__maincatgery-name'>{i.productName_ru}</h2>
@@ -47,7 +45,7 @@ const Mn = (productData) => {
                              <div className='product__quantiy-price'>
                                 <h2> {`${i?.productSizesAndQuantity[0].price} СУМ ${i?.productSizesAndQuantity.length > 1 ? "- " + i?.productSizesAndQuantity.reverse()[0].price : ""} CУМ ` }</h2>
                              </div>
-                             <Link className='link__btn' to={`/product-view/${productData._id}`}>
+                             <Link className='link__btn' to={`/product-view/${i?._id}`}>
                                  <button><TbHandClick className='clickHand'/> Выбор </button>
                               </Link>
                          </div>
